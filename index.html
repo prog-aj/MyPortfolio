@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Angelo James O. Gameng — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="noise"></div>
+  <div class="cursor-blob" id="cursorBlob"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">AJ<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#achievements" class="mobile-link">Achievements</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">GAMENG</div>
+    <div class="hero-content">
+      <p class="hero-label"><span class="line"></span> IT Developer · CICS · Philippines</p>
+      <h1 class="hero-title">
+        <span class="reveal-line">Angelo</span>
+        <span class="reveal-line accent-line">James</span>
+        <span class="reveal-line accent-line">Gameng</span>
+      </h1>
+      <p class="hero-sub">
+        3rd Year BSIT Student — building full-stack web &amp; desktop systems,<br/>
+        one clean commit at a time.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" id="projectCount">8+</span><span class="stat-label">Projects</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Competition Wins</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">3rd</span><span class="stat-label">Year BSIT</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">CICS</span><span class="stat-label">College</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder">
+          <img src="aj.jpg" alt="Angelo James O. Gameng" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+          <div class="profile-fallback">
+            <svg viewBox="0 0 160 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="65" r="42" fill="var(--accent)" opacity="0.12"/>
+              <circle cx="80" cy="65" r="30" fill="var(--accent)" opacity="0.22"/>
+              <ellipse cx="80" cy="140" rx="58" ry="38" fill="var(--accent)" opacity="0.10"/>
+              <path d="M80 38 C62 38 48 52 48 70 C48 88 62 102 80 102 C98 102 112 88 112 70 C112 52 98 38 80 38Z" fill="var(--accent)" opacity="0.35"/>
+              <path d="M32 148 C32 124 54 108 80 108 C106 108 128 124 128 148" fill="var(--accent)" opacity="0.2"/>
+              <text x="80" y="76" text-anchor="middle" font-family="Syne" font-weight="800" font-size="26" fill="var(--accent)" opacity="0.7">AJ</text>
+              <text x="80" y="165" text-anchor="middle" font-family="DM Mono" font-size="9" fill="var(--text-muted)">aj.jpg</text>
+            </svg>
+          </div>
+        </div>
+        <div class="about-img-tag">BSIT · 3rd Year</div>
+      </div>
+      <div class="about-text">
+        <p class="about-bio">
+          Hi, I'm <strong>Angelo James O. Gameng</strong> — a passionate Information Technology student
+          at the <em>College of Information and Computing Sciences (CICS)</em>. I love designing and building
+          full-stack web applications, desktop systems, and games that solve real-world problems.
+        </p>
+        <p class="about-bio">
+          From competitive web design sprints to capstone systems deployed for local government units,
+          I thrive on turning ideas into working software. Whether it's Laravel, Visual Basic, or C#,
+          I bring dedication and creativity to every project.
+        </p>
+        <div class="about-tags">
+          <span class="tag">Full-Stack Web</span>
+          <span class="tag">Desktop Apps</span>
+          <span class="tag">Game Dev</span>
+          <span class="tag">System Design</span>
+          <span class="tag">UI/UX</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Tech Stack</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon laravel">LV</div>
+        <div class="skill-info">
+          <h3>Laravel</h3>
+          <p>MVC, Breeze auth, Eloquent ORM, role-based access, MySQL</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon vb">VB</div>
+        <div class="skill-info">
+          <h3>Visual Basic</h3>
+          <p>Desktop applications, SQL Server, Windows forms, data reports</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon cs">C#</div>
+        <div class="skill-info">
+          <h3>C# / .NET</h3>
+          <p>OOP, game development, desktop apps, algorithm building</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon html">HT</div>
+        <div class="skill-info">
+          <h3>HTML &amp; CSS</h3>
+          <p>Semantic markup, responsive design, animations, modern CSS</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon php">PHP</div>
+        <div class="skill-info">
+          <h3>PHP / PDO</h3>
+          <p>CRUD systems, session management, prepared statements</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon db">DB</div>
+        <div class="skill-info">
+          <h3>SQL / Databases</h3>
+          <p>MySQL, SQL Server — schema design, queries, relationships</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon java">JV</div>
+        <div class="skill-info">
+          <h3>Java</h3>
+          <p>OOP principles, data structures, problem solving</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon js-icon">JS</div>
+        <div class="skill-info">
+          <h3>JavaScript</h3>
+          <p>Responsive design, DOM manipulation, animations</p>
+          <div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievements section" id="achievements">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Achievements</h2>
+    </div>
+    <p class="achievements-sub">Competition wins across Cagayan State University campuses — representing CICS in general programming, IT knowledge, and web design events.</p>
+    <div class="achievements-timeline">
+
+      <!-- 1st Year -->
+      <div class="ach-year-block reveal">
+        <div class="ach-year-badge">1st Year</div>
+        <div class="ach-cards">
+          <div class="ach-card">
+            <div class="ach-medal gold">🥇</div>
+            <div class="ach-info">
+              <span class="ach-event">General Programming</span>
+              <span class="ach-place">1st Place</span>
+              <span class="ach-venue">CSU Sanchez Mira Campus</span>
+            </div>
+            <div class="ach-ribbon gold-ribbon">CHAMPION</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2nd Year -->
+      <div class="ach-year-block reveal">
+        <div class="ach-year-badge">2nd Year</div>
+        <div class="ach-cards">
+          <div class="ach-card">
+            <div class="ach-medal gold">🥇</div>
+            <div class="ach-info">
+              <span class="ach-event">General Programming</span>
+              <span class="ach-place">Champion</span>
+              <span class="ach-venue">CSU Sanchez Mira Campus</span>
+            </div>
+            <div class="ach-ribbon gold-ribbon">CHAMPION</div>
+          </div>
+          <div class="ach-card">
+            <div class="ach-medal gold">🏆</div>
+            <div class="ach-info">
+              <span class="ach-event">IT Quiz Bee</span>
+              <span class="ach-place">Champion</span>
+              <span class="ach-venue">CSU Sanchez Mira Campus</span>
+            </div>
+            <div class="ach-ribbon gold-ribbon">CHAMPION</div>
+          </div>
+          <div class="ach-card">
+            <div class="ach-medal gold">🥇</div>
+            <div class="ach-info">
+              <span class="ach-event">IT — Uni-Wide</span>
+              <span class="ach-place">1st Place</span>
+              <span class="ach-venue">CSU Aparri Campus</span>
+            </div>
+            <div class="ach-ribbon gold-ribbon">1ST PLACE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3rd Year -->
+      <div class="ach-year-block reveal">
+        <div class="ach-year-badge current-year">3rd Year</div>
+        <div class="ach-cards">
+          <div class="ach-card featured-ach">
+            <div class="ach-medal gold">🥇</div>
+            <div class="ach-info">
+              <span class="ach-event">Dynamic Web Design</span>
+              <span class="ach-place">Champion</span>
+              <span class="ach-venue">CSU Sanchez Mira Campus</span>
+            </div>
+            <div class="ach-ribbon gold-ribbon">CHAMPION</div>
+          </div>
+          <div class="ach-card featured-ach">
+            <div class="ach-medal gold">🥇</div>
+            <div class="ach-info">
+              <span class="ach-event">Dynamic Web Design</span>
+              <span class="ach-place">1st Place</span>
+              <span class="ach-venue">CSU Gonzaga Campus</span>
+            </div>
+            <div class="ach-ribbon gold-ribbon">1ST PLACE</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Projects</h2>
+    </div>
+    <div class="projects-toolbar">
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Web">Web</button>
+        <button class="filter-btn" data-filter="Desktop">Desktop</button>
+        <button class="filter-btn" data-filter="Game">Game</button>
+        <button class="filter-btn" data-filter="Mobile">Mobile</button>
+        <button class="filter-btn" data-filter="Competition">Competition</button>
+      </div>
+      <button class="btn-add-project" id="addProjectBtn">+ Add Project</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-inner reveal">
+
+      <!-- LEFT: Info -->
+      <div class="contact-left">
+        <h3>Let's build something<br/><span class="accent">together.</span></h3>
+        <p>Capstone collaboration, freelance project, or just a chat about code — I'm always open to connect.</p>
+
+        <div class="contact-details">
+          <a class="contact-item" href="/cdn-cgi/l/email-protection#2f4e4501484e424a41481d1f1d196f48424e4643014c4042">
+            <span class="contact-icon">✉</span>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value"><span class="__cf_email__" data-cfemail="0263682c65636f676c653032303442656f636b6e2c616d6f">[email&#160;protected]</span></span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <span class="contact-icon">🎓</span>
+            <div>
+              <span class="contact-label">School</span>
+              <span class="contact-value">CICS — BSIT, 3rd Year</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Philippines 🇵🇭</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <span class="contact-note-dot"></span>
+          Usually responds within 24 hours
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact Form -->
+      <div class="contact-form-wrap">
+        <div class="contact-form-header">
+          <span class="form-tag">✉ Send a message</span>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="cf-name">Your Name <span class="req">*</span></label>
+              <input type="text" id="cf-name" name="from_name" placeholder="Juan dela Cruz" autocomplete="name"/>
+              <span class="cf-error" id="err-name"></span>
+            </div>
+            <div class="cf-group">
+              <label for="cf-email">Your Email <span class="req">*</span></label>
+              <input type="email" id="cf-email" name="from_email" placeholder="juan@email.com" autocomplete="email"/>
+              <span class="cf-error" id="err-email"></span>
+            </div>
+          </div>
+          <div class="cf-group">
+            <label for="cf-subject">Subject <span class="req">*</span></label>
+            <input type="text" id="cf-subject" name="subject" placeholder="Capstone collab / Freelance / Just saying hi"/>
+            <span class="cf-error" id="err-subject"></span>
+          </div>
+          <div class="cf-group">
+            <label for="cf-message">Message <span class="req">*</span></label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Hi AJ, I'd love to work with you on..."></textarea>
+            <span class="cf-error" id="err-message"></span>
+          </div>
+          <div class="cf-footer">
+            <span class="cf-privacy">🔒 Goes directly to AJ's inbox.</span>
+            <button type="submit" class="btn-primary cf-submit" id="cfSubmitBtn">
+              <span class="cf-btn-text">Send Message</span>
+              <span class="cf-spinner" id="cfSpinner"></span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Success state -->
+        <div class="cf-success" id="cfSuccess">
+          <div class="cf-success-icon">✓</div>
+          <h4>Message Sent!</h4>
+          <p>Thanks for reaching out. AJ will get back to you within 24 hours.</p>
+          <button class="btn-ghost" id="cfSendAnother">Send another</button>
+        </div>
+
+        <!-- Error state -->
+        <div class="cf-send-error" id="cfSendError">
+          <span>⚠ Could not send — EmailJS not configured. <a href="/cdn-cgi/l/email-protection#95f4ffbbf2f4f8f0fbf2a7a5a7a3d5f2f8f4fcf9bbf6faf8">Email directly instead.</a></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">AJ<span class="dot">.</span></span>
+      <span class="footer-copy">© 2025 Angelo James O. Gameng · BSIT · CICS</span>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="projectModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-inner">
+        <div class="modal-header">
+          <div class="modal-meta">
+            <span class="modal-badge" id="modalBadge"></span>
+            <span class="modal-num" id="modalNum"></span>
+          </div>
+          <div class="modal-title-row">
+            <span class="modal-emoji" id="modalEmoji"></span>
+            <h2 class="modal-title" id="modalTitle"></h2>
+          </div>
+          <div class="modal-stack" id="modalStack"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4>About this project</h4>
+            <p id="modalDesc"></p>
+          </div>
+          <div class="modal-section" id="modalFeaturesSection">
+            <h4>Key Features</h4>
+            <ul class="modal-features" id="modalFeatures"></ul>
+          </div>
+          <div class="modal-section" id="modalScreenshotsSection">
+            <h4>Screenshots</h4>
+            <div class="modal-screenshots" id="modalScreenshots"></div>
+            <div class="add-screenshot-wrap">
+              <label class="add-screenshot-btn">
+                <input type="file" accept="image/*" multiple id="screenshotUpload" style="display:none"/>
+                + Add Screenshot
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD PROJECT MODAL -->
+  <div class="modal-overlay" id="addModalOverlay">
+    <div class="modal modal-form" id="addProjectModal">
+      <button class="modal-close" id="addModalClose">✕</button>
+      <div class="modal-inner">
+        <div class="modal-header">
+          <h2 class="modal-title">New Project</h2>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-top:0.3rem;">Add to your portfolio</p>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Project Title <span class="req">*</span></label>
+            <input type="text" id="formTitle" placeholder="e.g. Student Portal System"/>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Category <span class="req">*</span></label>
+              <select id="formCategory">
+                <option value="Web">Web</option>
+                <option value="Desktop">Desktop</option>
+                <option value="Game">Game</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Competition">Competition</option>
+                <option value="Capstone">Capstone</option>
+                <option value="Academic">Academic</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Emoji Icon</label>
+              <input type="text" id="formEmoji" placeholder="🖥️" maxlength="4"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tech Stack <span class="req">*</span> <span class="hint">(comma-separated)</span></label>
+            <input type="text" id="formStack" placeholder="e.g. Laravel, MySQL, PHP"/>
+          </div>
+          <div class="form-group">
+            <label>Description <span class="req">*</span></label>
+            <textarea id="formDesc" rows="4" placeholder="Describe what this project does..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Key Features <span class="hint">(one per line)</span></label>
+            <textarea id="formFeatures" rows="4" placeholder="User authentication&#10;Dashboard with analytics&#10;Export to PDF"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Screenshots</label>
+            <label class="add-screenshot-btn" style="display:inline-flex;">
+              <input type="file" accept="image/*" multiple id="formScreenshots" style="display:none"/>
+              + Upload Images
+            </label>
+            <div class="form-screenshot-preview" id="formScreenshotPreview"></div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-ghost" id="cancelAddProject">Cancel</button>
+            <button class="btn-primary" id="saveProject">Save Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</button>
+    <img src="" alt="Screenshot" class="lightbox-img" id="lightboxImg"/>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+
+  <!-- DELETE CONFIRM MODAL -->
+  <div class="delete-overlay" id="deleteOverlay">
+    <div class="delete-modal" id="deleteModal">
+      <div class="delete-icon">🗑</div>
+      <h3 class="delete-title">Remove Project?</h3>
+      <p class="delete-msg" id="deleteMsg">This will remove the project from your portfolio.</p>
+      <div class="delete-actions">
+        <button class="btn-ghost" id="deleteCancelBtn">Cancel</button>
+        <button class="btn-danger" id="deleteConfirmBtn">Yes, Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
