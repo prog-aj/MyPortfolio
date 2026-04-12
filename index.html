@@ -25,9 +25,18 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+        <div class="theme-toggle-icons">
+          <span class="icon-moon">🌙</span>
+          <span class="icon-sun">☀️</span>
+        </div>
+        <div class="theme-toggle-thumb" id="themeThumb"></div>
+      </button>
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- MOBILE MENU -->
@@ -39,6 +48,15 @@
       <li><a href="#projects" class="mobile-link">Projects</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
     </ul>
+    <div class="mobile-theme-toggle">
+      <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle dark/light mode" title="Toggle dark/light mode" style="transform:scale(1.2)">
+        <div class="theme-toggle-icons">
+          <span class="icon-moon">🌙</span>
+          <span class="icon-sun">☀️</span>
+        </div>
+        <div class="theme-toggle-thumb" id="themeThumbMobile"></div>
+      </button>
+    </div>
   </div>
 
   <!-- HERO -->
