@@ -2,6 +2,45 @@
    AJ GAMENG PORTFOLIO - script.js
 ======================================================== */
 
+// ─── DARK / LIGHT MODE TOGGLE ───────────────────────────
+(function() {
+  const THEME_KEY = 'aj_theme';
+  const saved = localStorage.getItem(THEME_KEY);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = saved ? saved : (prefersDark ? 'dark' : 'light');
+  if (initialTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+
+function initThemeToggle() {
+  const THEME_KEY = 'aj_theme';
+  const toggleBtns = [
+    document.getElementById('themeToggle'),
+    document.getElementById('themeToggleMobile')
+  ].filter(Boolean);
+
+  function getTheme() {
+    return document.documentElement.getAttribute('data-theme') || 'dark';
+  }
+
+  function setTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem(THEME_KEY, theme);
+  }
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = getTheme();
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  });
+}
+
 // ─── PROJECT DATA ────────────────────────────────────────
 const STORAGE_KEY = 'aj_projects';
 
@@ -357,6 +396,7 @@ function observeRevealElements() {
 // ─── INIT ────────────────────────────────────────────────
 renderProjects();
 observeRevealElements();
+initThemeToggle();
 
 // ─── EMAILJS ─────────────────────────────────────────────
 const EMAILJS_PUBLIC_KEY  = 'uIL-4rCHhoSVw7mT7';
